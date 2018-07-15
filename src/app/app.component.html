@@ -3,7 +3,7 @@
 	<div>
 		<form (submit)="addTodo($event)">
 			<input placeholder="Type your Todo here" [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="inputfield" name="newTodo">
-			<button type="submit" [disabled]="newTodo===''">Add Todo</button>
+			<button type="submit" [disabled]="newTodo===' '">Add Todo</button>
     </form>
   </div>
 
