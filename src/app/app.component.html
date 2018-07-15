@@ -1,0 +1,22 @@
+<div class="todos">
+
+	<div>
+		<form (submit)="addTodo($event)">
+			<input placeholder="Type your Todo here" [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="inputfield" name="newTodo">
+			<button type="submit" [disabled]="newTodo===''">Add Todo</button>
+    </form>
+  </div>
+
+    <ol>
+      <li *ngFor="let todo of todos; let i=index">
+        <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" />
+        <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}</span>
+        <span (click)="deleteSelectedTodos()" class="delete-icon"></span>
+      </li>
+    </ol>
+
+      <div *ngIf= "todos.length > 0">
+        <button (click)="deleteSelectedTodos()">Delete Selected</button>
+      </div>
+
+  </div>

@@ -1,0 +1,21 @@
+.todos input.inputfield {
+  width: 350px;
+  height: 30px;
+  font-size: 1.5em;
+}
+
+.todos input.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.todos .checked {
+  text-decoration: line-through;
+}
+
+.todos button {
+  height: 34px;
+  font-size: 1em;
+  margin-left: 5px;
+  border: solid 1px gray;
+}
